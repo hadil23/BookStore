@@ -33,10 +33,12 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>Book</th>
+                                                <th>Bofdok</th>
                                                 <th>Image</th>
                                                 <th>Genre</th>
                                                 <th>Unit Price(INR)</th>
+    
+                                                <th> Quantity</th>
                                                 <th>Total Price</th>
                                             </tr>
                                 @foreach (var item in order.OrderDetail)
@@ -50,11 +52,11 @@
                                             }
                                             else
                                             {
-                                                                    <img src="/images/@item.Book.Image" style="width:80px;height:100px" />
+                                                   <img src="/images/@item.Book.Image" style="width:80px;height:100px" />
                                             }
                                                         </td>
                                                         <td>@item.Book.Genre.GenreName</td>
-                                                        <td>@item.Book.Price X @item.Quantity</td>
+                                                         <td>@item.Book.Price  <th>Total Price</th></td>
                                                         <td> @(item.Book.Price * item.Quantity) </td>
                                                     </tr>
                                 }
